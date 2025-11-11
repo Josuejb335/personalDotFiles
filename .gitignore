@@ -1,0 +1,17 @@
+# Archivos temporales
+*.log
+*.bak
+*.tmp
+*.swp
+
+# Caches
+.cache/
+__pycache__/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos personales
+*.old
+*.backup
