@@ -1,12 +1,10 @@
 #!/bin/bash
 
-# cerrar todas las barras existentes
+# Cerrar todas las barras activas
 killall -q polybar
-
-# Esperar a que terminen
 while pgrep -x polybar >/dev/null; do sleep 0.5; done
 
-# Lanzar la barra principal
-polybar -r mybar &
-
-echo "Polybar reiniciada"
+# Lanzar en todos los monitores detectados
+for m in $(polybar --list-monitors | cut -d":" -f1); do
+    MONITOR=$m polybar -r mybar -c ~/.config/polybar/config.ini &
+done
