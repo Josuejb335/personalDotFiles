@@ -1,0 +1,27 @@
+# Launch terminal
+super + Return
+	kitty
+
+# Close window
+super + q
+	bspc node -c
+
+# Restart bspwm and polybar
+super + r
+	bspc wm -r
+	
+
+
+
+# Launch app menu
+super + d
+	rofi -show drun
+
+# Move between windows
+super + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+# Fullscreen
+super + f
+	bspc node -t fullscreen
+

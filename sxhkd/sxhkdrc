@@ -1,0 +1,43 @@
+# abrir terminal
+super + Return
+	kitty
+
+#abrir brave
+super + w
+	brave
+
+#abrir Thunar
+super + e
+	thunar
+
+# Cerrar window
+super + q
+	bspc node -c
+
+# Reiniciar bspwm y atajos
+super +shift + r
+	bspc wm -r; ~/.config/polybar/launch.sh &
+
+# menu apps
+super + space
+	rofi -show drun
+
+# Moverse entre nodos
+super + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+# Fullscreen
+super + d
+    ~/.local/bin/toggle_maximize.sh
+
+# cambiar a otro escritorio
+super + {1-9}
+	bspc desktop -f ^{1-9}
+
+# Mover la ventana actual al escritorio N
+super + alt + {1-9}
+	bspc node -d ^{1-9}
+  
+#captura pantalla 
+Print
+	flameshot gui
