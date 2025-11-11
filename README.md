@@ -22,17 +22,17 @@ Configuración personal de **BSPWM** en Arch Linux.
 
 ---
 
+### Dependencias
+### Esenciales
+>bspwm, sxhkd, polybar, picom, rofi, flameshot, dunst
+
+### Utilidades
+>xclip, maim, slop, neofetch, nitrogen, lxappearance
+
+### Fuentes
+>ttf-jetbrains-mono-nerd (recomendada)
+
 ## Instalación rápida
-
-## Dependencias
-###  Esenciales
-bspwm, sxhkd, polybar, picom, rofi, flameshot, dunst
-
-###  Utilidades
-xclip, maim, slop, neofetch, nitrogen, lxappearance
-
-###  Fuentes
-ttf-jetbrains-mono-nerd (recomendada)
 
 ```bash
 git clone https://github.com/Josuejb335/personalDotFiles ~/.dotfiles
