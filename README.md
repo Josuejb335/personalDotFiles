@@ -15,8 +15,6 @@ Configuración personal de **BSPWM** en Arch Linux.
 
 ---
 
-## Incluye
-
 | Componente | Descripción |
 |-------------|--------------|
 | **WM** | [bspwm](https://github.com/baskerville/bspwm) |
@@ -31,26 +29,7 @@ Configuración personal de **BSPWM** en Arch Linux.
 
 ### Dependencias necesarias
 
-Instalar dependencias necesarias:
-
 ```bash
-sudo pacman -Syu --noconfirm \
-  xorg xorg-xinit \
-  bspwm sxhkd polybar picom rofi flameshot dunst \
-  lxappearance \
-  fastfetch xclip maim slop \
-  networkmanager git stow \
-  mesa linux-firmware \
-  ttf-jetbrains-mono-nerd ttf-font-awesome \
-  papirus-icon-theme \
-  qemu-guest-agent xf86-video-qxl \
-  base-devel
+sudo pacman -S bspwm sxhkd polybar picom rofi flameshot dunst xorg xorg-xinit ttf-jetbrains-mono-nerd ttf-font-awesome
 ```
 ---
-### Instalación 
-
-```bash
-git clone https://github.com/Josuejb335/personalDotFiles ~/.dotfiles
-cd ~/.dotfiles
-sudo pacman -S stow
-stow bspwm sxhkd polybar picom rofi flameshot
