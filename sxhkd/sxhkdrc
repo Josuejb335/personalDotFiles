@@ -41,3 +41,7 @@ super + alt + {1-9}
 #captura pantalla 
 Print
 	flameshot gui
+
+#fondo de pantalla
+super + f
+    ~/.config/bspwm/scripts/wallpicker &
