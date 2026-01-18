@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# RUTAS ABSOLUTAS 
+WAL="/home/josue/.local/bin/wal"
+FEH="/usr/bin/feh"
+POLYBAR="/usr/bin/polybar"
+CONFIG="/home/josue/.config/polybar/config.ini"
+WALLDIR="/home/josue/Pictures/wallpapers"
+
+# 1. Selección de imagen
+IMG=$(ls "$WALLDIR" | rofi -dmenu -i -p "Wallpaper")
+[ -z "$IMG" ] && exit
+FULL_PATH="$WALLDIR/$IMG"
+
+#aplicar fondo
+$FEH --bg-fill "$FULL_PATH"
+$WAL -n -q -e -i "$FULL_PATH"
+
+# 3. Reiniciar Polybar
+pkill -x polybar
+sleep 0.2
+$POLYBAR mybar -c "$CONFIG" > /dev/null 2>&1 &
