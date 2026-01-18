@@ -1,8 +1,7 @@
 #!/bin/sh
 
 #configuracion visual
-
-#configuracion montires
+configuracion montires
 xrandr --setprovideroutputsource 1 0
 xrandr --auto
 
@@ -32,6 +31,7 @@ bspc config gapless_monocle true
 picom --config ~/.config/picom/picom.conf -b &
 
 #--------------------------------------
+#fondo
 
 # Detener instancias duplicadas
 pgrep -x sxhkd > /dev/null || sxhkd &
@@ -45,11 +45,8 @@ xsetroot -cursor_name left_ptr &
 # Configuración del teclado
 setxkbmap latam
 
-# Fondo de pantalla (con delay para esperar X)
-(sleep 1 && feh --bg-fill /home/josue/Pictures/Wallpapers-gnome/fondo1.jpg) &
-
 #-----------Inicio----------
-# Lanzar compositor (esperar un poquito para no bloquear)
+# Lanzar compositor (esperar un poco para no bloquear)
 #pgrep -x picom > /dev/null || (sleep 0.5 && picom --config ~/.config/picom/picom.conf -b) &
 
 #escritorios
@@ -59,8 +56,18 @@ bspc monitor -d 1 2 3 4 5 6 7 8 9
 bspc config focus_follows_pointer true
 bspc config pointer_follows_focus true
 
-# Barra
-polybar mybar &
+(
+    sleep 1
+    # Restaurar con la ruta de pipx
+    $HOME/.local/bin/wal -R -n -e
+    
+    # Forzar fondo con feh
+    [ -f "$HOME/.cache/wal/wal" ] && feh --bg-fill "$(< "$HOME/.cache/wal/wal")"
+    
+    # Lanzar barra
+    pkill -x polybar
+    polybar mybar &
+) &
 
 # Daemons útiles
 nm-applet &
