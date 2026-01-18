@@ -2,7 +2,7 @@
 
 Configuración personal de **BSPWM** en Arch Linux.
 
-> Setup muy minimalista con bajo consumo de recursos, solo lo esencial, con efectos suaves, transparencia y barra tipo Hyprland.
+> Setup muy minimalista con bajo consumo de recursos, solo lo esencial, con efectos suaves, transparencia y barra tipo Hyprland y cambio de paleta de color automatico acorde al fondo de pantalla.
 
 ---
 
@@ -30,6 +30,6 @@ Configuración personal de **BSPWM** en Arch Linux.
 ### Dependencias necesarias
 
 ```bash
-sudo pacman -S bspwm sxhkd polybar picom rofi flameshot dunst xorg xorg-xinit ttf-jetbrains-mono-nerd ttf-font-awesome
+bspwm sxhkd polybar picom rofi flameshot dunst xorg xorg-xinit ttf-jetbrains-mono-nerd ttf-font-awesome pywal (instalar con pipx)
 ```
 ---
