@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#cambiar rutas depende al usuario
 # RUTAS ABSOLUTAS 
 WAL="/home/josue/.local/bin/wal"
 FEH="/usr/bin/feh"
