@@ -69,7 +69,7 @@ bspc config pointer_follows_focus true
     polybar mybar &
 ) &
 
-# Daemons útiles
+# Daemons
 nm-applet &
 dunst &
 sxhkd &
