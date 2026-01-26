@@ -16,8 +16,10 @@ FULL_PATH="$WALLDIR/$IMG"
 #aplicar fondo
 $FEH --bg-fill "$FULL_PATH"
 $WAL -n -q -e -i "$FULL_PATH"
+kitty @ set-colors --all ~/.cache/wal/colors-kitty.conf
 
 # 3. Reiniciar Polybar
 pkill -x polybar
+bspc wm -r
 sleep 0.2
 $POLYBAR mybar -c "$CONFIG" > /dev/null 2>&1 &
