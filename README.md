@@ -30,6 +30,6 @@ Configuración personal de **BSPWM** en Arch Linux.
 ### Dependencias necesarias
 
 ```bash
-bspwm sxhkd polybar picom rofi flameshot dunst xorg xorg-xinit ttf-jetbrains-mono-nerd ttf-font-awesome pywal (instalar con pipx)
+bspwm sxhkd polybar picom rofi flameshot kitty dunst xorg xorg-xinit ttf-jetbrains-mono-nerd ttf-font-awesome pywal (instalar con pipx)
 ```
 ---
