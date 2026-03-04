@@ -20,7 +20,7 @@ super +shift + r
 
 # menu apps
 super + space
-	rofi -show drun
+	~/.config/rofi/launchers/type-2/launcher.sh
 
 # Moverse entre nodos
 super + {h,j,k,l}
